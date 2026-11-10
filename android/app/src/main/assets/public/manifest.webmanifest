@@ -1,0 +1,11 @@
+{
+  "name": "Forme — Workout Companion",
+  "short_name": "Forme",
+  "description": "Your personal workout, hydration and movement companion.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f7f8f5",
+  "theme_color": "#f7f8f5",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
+
