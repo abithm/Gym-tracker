@@ -28,7 +28,7 @@
   };
   const ico = (name, cls='') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${icons[name] || icons.spark}</svg>`;
   const escapeHTML = (v='') => String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const litres = ml => (ml/1000).toFixed(ml%1000===0?0:2).replace(/\.?0+$/,'');
+  const litres = ml => {const value=(ml/1000).toFixed(ml%1000===0?0:2);return value.includes('.')?value.replace(/0+$/,'').replace(/\.$/,''):value;};
   const normalizeWorkoutDays = (count, picked) => {
     const days=[...new Set(picked)].sort((a,b)=>a-b);
     for(let i=0;days.length<count&&i<7;i++)if(!days.includes(i))days.push(i);
