@@ -1,29 +1,41 @@
 # Forme — workout companion
 
-A light, installable web app for personal workout planning, workout logging, water tracking and steps. It is built with browser-native HTML, CSS and JavaScript, so it runs on the web and adapts to Android phone screens.
+A light workout tracker for web and Android. The web interface is bundled with Vite and packaged for Android with Capacitor.
 
-## Run it
-
-Serve this folder over HTTPS or from `localhost` (service workers, installation and motion sensors need a secure browser context). For example, with Python installed:
+## Run the web app
 
 ```sh
-python -m http.server 8000
+npm install
+npm run dev
 ```
 
-Open `http://localhost:8000` on your computer. On Android, deploy the folder to an HTTPS static host and open it in Chrome. Use Chrome's **Install app** or **Add to Home screen** option to install it.
+Open the local Vite URL printed by the command.
+
+## Build the Android app
+
+Install Android Studio and an Android SDK, then run:
+
+```sh
+npm run android
+```
+
+This builds the web assets, syncs them into the Capacitor Android project and opens Android Studio. To only refresh the Android project after web changes, run `npm run cap:sync`.
+
+## Notifications
+
+- Water reminders use scheduled local Android notifications, so reminders can arrive while the app is closed. Android notification permission is requested when reminders are enabled.
+- Remote notifications use Capacitor Push Notifications and Firebase Cloud Messaging. Add your Firebase project's `google-services.json` to `android/app/`, then sync the Android project. A trusted server or Firebase Cloud Function is still needed to send production messages; never put Firebase Admin credentials in this app.
 
 ## What's included
 
-- Create an account and sign in on the current device.
-- Personalize goals, experience, available equipment and training days. The plan generates 2–6 weekly sessions with exercise, set and rep suggestions.
-- Mark exercises and log completed gym sessions.
-- Track daily water and step totals. Steps can be entered manually or counted from motion while the app is open on supported phones.
-- Set hydration reminders while the app is open. Browser notification support varies.
-- View weekly workout history and progress. The app shell is cached for offline access after its first visit.
+- Personal workout split based on goals, experience, equipment and weekly availability.
+- Session logging, small exercise illustrations, weekly progress and history.
+- Daily water and step tracking, with manual steps and a foreground motion-sensor option in the web app.
+- Installable web app and an Android Capacitor project.
 
 ## Account and device storage
 
-This starter stores accounts, password digests and workout data in browser local storage. Accounts are local to one browser on one device; there is no server, cloud backup or cross-device sign-in. Do not use a password here that you rely on for another service. Before offering this as a multi-user product, connect a backend authentication provider and server-side data storage.
+The current sign-in and fitness data are stored in the browser/WebView on the current device. There is no secure server login, cloud backup or cross-device sync yet. Do not reuse a password from another service. Connect a backend authentication provider and server-side storage before using this as a multi-user product.
 
-Workout suggestions are general fitness templates, not medical advice. Users should adapt them to their ability and seek qualified guidance for injuries or health concerns.
+Workout suggestions are general fitness templates, not medical advice. Adapt them to your ability and seek qualified guidance for injuries or health concerns.
 
