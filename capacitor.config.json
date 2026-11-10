@@ -1,0 +1,18 @@
+{
+  "appId": "com.abithm.gymtracker",
+  "appName": "Forme",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_forme",
+      "iconColor": "#4d795e"
+    },
+    "PushNotifications": {
+      "presentationOptions": ["sound", "banner", "list"]
+    }
+  }
+}
+
