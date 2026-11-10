@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Forme</string>
     <string name="title_activity_main">Forme</string>
-    <string name="package_name">com.abithm.gymtracker</string>
-    <string name="custom_url_scheme">com.abithm.gymtracker</string>
+    <string name="package_name">com.tracker.app</string>
+    <string name="custom_url_scheme">com.tracker.app</string>
 </resources>
 
