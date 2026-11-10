@@ -1,0 +1,15 @@
+node_modules/
+www/
+.gradle-home/
+.DS_Store
+.idea/
+*.iml
+local.properties
+android/.gradle/
+android/app/google-services.json
+android/build/
+android/app/build/
+android/captures/
+android/.externalNativeBuild/
+android/.cxx/
+
