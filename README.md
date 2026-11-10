@@ -25,6 +25,7 @@ This builds the web assets, syncs them into the Capacitor Android project and op
 
 - Water reminders use scheduled local Android notifications, so reminders can arrive while the app is closed. Android notification permission is requested when reminders are enabled.
 - Remote notifications use Capacitor Push Notifications and Firebase Cloud Messaging. Add your Firebase project's `google-services.json` to `android/app/`, then sync the Android project. A trusted server or Firebase Cloud Function is still needed to send production messages; never put Firebase Admin credentials in this app.
+- This project uses the Android package ID registered in its Firebase config. The provided config is ignored by Git so it stays out of the public repository. After registering an Android device, use **Copy Firebase test token** in Settings to send a manual test from the Firebase console.
 
 ## What's included
 
