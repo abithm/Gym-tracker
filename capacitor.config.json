@@ -1,5 +1,5 @@
 {
-  "appId": "com.abithm.gymtracker",
+  "appId": "com.tracker.app",
   "appName": "Forme",
   "webDir": "www",
   "server": {
@@ -11,7 +11,11 @@
       "iconColor": "#4d795e"
     },
     "PushNotifications": {
-      "presentationOptions": ["sound", "banner", "list"]
+      "presentationOptions": [
+        "sound",
+        "banner",
+        "list"
+      ]
     }
   }
 }
