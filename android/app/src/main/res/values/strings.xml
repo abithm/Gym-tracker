@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Forme</string>
+    <string name="title_activity_main">Forme</string>
+    <string name="package_name">com.abithm.gymtracker</string>
+    <string name="custom_url_scheme">com.abithm.gymtracker</string>
+</resources>
+
